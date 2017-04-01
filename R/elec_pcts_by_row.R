@@ -22,7 +22,7 @@
 elec_pcts_by_row <- function (df, mycols, totalcol = "Total"){
   #modification of pct from caroline package to do percents by rows
   for (i in mycols){
-    df[paste(i, "pct", sep = ".")] <- round(df[i] / df[totalcol], 3)
+    df[paste(i, "pct", sep = ".")] <- round(df[i] / df[totalcol], 3) * 100
   }
   return(df)
 }
