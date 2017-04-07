@@ -2,3 +2,4 @@
 
 export(elec_find_winner)
 export(elec_pcts_by_row)
+export(elec_winners_map)
