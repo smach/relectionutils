@@ -39,7 +39,7 @@ elec_winners_map <- function(gisdatafile, winner = "Yes", loser = "No", placeCol
   }
 
   if(turnout){
-    turnoutPopup <- paste0("<b>", gisdatafile[[1]], "</b><br />Turnout: ", scales::percent(gisdatafile$Turnout))
+    turnoutPopup <- paste0("<b>", as.vector(gisdatafile[[placeCol]]), "</b><br />Turnout: ", scales::percent(gisdatafile$Turnout))
   }
 
   # Create map
