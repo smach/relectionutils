@@ -26,6 +26,9 @@ elec_find_winner <- function (filename, datacolstart, datacolstop, exportcsv = T
     data <- eval(parse(text = filename))
   }
 
+  # Fix problems if tibble
+  data <- as.data.frame(data)
+
   for(i in 1:nrow(data)){
     ranks <- rank(data[i,datacolstart:datacolstop])
     maxrank <- as.numeric(max(ranks))
